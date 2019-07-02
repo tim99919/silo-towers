@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TowerComponent } from './tower/tower.component';
+import { TowerImageComponent } from './tower-info/tower-image/tower-image.component';
+import { TowerInfoComponent } from './tower-info/tower-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TowerComponent
+    TowerInfoComponent,
+    TowerImageComponent
   ],
   imports: [
     BrowserModule,

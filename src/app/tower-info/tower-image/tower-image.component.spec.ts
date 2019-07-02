@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TowerComponent } from './tower.component';
+import { TowerImageComponent } from './tower-image.component';
 
-describe('TowerComponent', () => {
-  let component: TowerComponent;
-  let fixture: ComponentFixture<TowerComponent>;
+describe('TowerImageComponent', () => {
+  let component: TowerImageComponent;
+  let fixture: ComponentFixture<TowerImageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TowerComponent ]
+      declarations: [ TowerImageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TowerComponent);
+    fixture = TestBed.createComponent(TowerImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

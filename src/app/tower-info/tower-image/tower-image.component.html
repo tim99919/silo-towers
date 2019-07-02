@@ -1,0 +1,98 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  width="154.6px" height="491.8px" viewBox="0 0 154.6 491.8" style="enable-background:new 0 0 154.6 491.8;"
+  xml:space="preserve">
+
+  <g>
+    <line x1="53.8" y1="2" x2="100.9" y2="2" fill="none" stroke="#8B959F" stroke-width="4" />
+
+    <g>
+      <rect x="0" y="4.3" fill="#CBCBCB" width="154.6" height="4.3" />
+    </g>
+
+    <g>
+      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.0258" y1="57.4" x2="145.988" y2="57.4">
+        <stop offset="0" style="stop-color:#616166" />
+        <stop offset="0.21" style="stop-color:#9B9B9B" />
+        <stop offset="1" style="stop-color:#48484F" />
+      </linearGradient>
+      <rect x="8.7" y="11.4" fill="url(#SVGID_1_)" width="137.3" height="91.9" />
+    </g>
+
+
+    <g>
+      <rect x="0" y="105.7" fill="#CBCBCB" width="154.6" height="4.3" />
+    </g>
+
+    <g>
+      <linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="12.0258" y1="158.8" x2="145.988" y2="158.8">
+        <stop offset="0" style="stop-color:#616166" />
+        <stop offset="0.21" style="stop-color:#9B9B9B" />
+        <stop offset="1" style="stop-color:#48484F" />
+      </linearGradient>
+
+      <rect x="8.7" y="112.9" fill="url(#SVGID_24_)" width="137.3" height="91.9" />
+    </g>
+
+
+    <g>
+      <rect x="0" y="207.2" fill="#CBCBCB" width="154.6" height="4.3" />
+    </g>
+
+    <g>
+      <linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="12.0258" y1="260.25" x2="145.988" y2="260.25">
+        <stop offset="0" style="stop-color:#616166" />
+        <stop offset="0.21" style="stop-color:#9B9B9B" />
+        <stop offset="1" style="stop-color:#48484F" />
+      </linearGradient>
+
+      <rect x="8.7" y="214.3" fill="url(#SVGID_26_)" width="137.3" height="91.9" />
+    </g>
+
+
+    <g>
+      <rect x="0" y="308.6" fill="#CBCBCB" width="154.6" height="4.3" />
+    </g>
+
+    <g>
+      <linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="12.0258" y1="361.7" x2="145.988" y2="361.7">
+        <stop offset="0" style="stop-color:#616166" />
+        <stop offset="0.21" style="stop-color:#9B9B9B" />
+        <stop offset="1" style="stop-color:#48484F" />
+      </linearGradient>
+
+      <rect x="8.7" y="315.8" style="clip-path:url(#SVGID_27_);fill:url(#SVGID_28_);" width="137.3" height="91.9" />
+    </g>
+
+    <g>
+      <rect x="0" y="410.1" fill="#CBCBCB" width="154.6" height="4.3" />
+    </g>
+
+
+    <linearGradient id="SVGID_29_" gradientUnits="userSpaceOnUse" x1="8.7" y1="455.5" x2="146.0" y2="455.5">
+      <stop offset="0" style="stop-color:#616166" />
+      <stop offset="0.21" style="stop-color:#9B9B9B" />
+      <stop offset="1" style="stop-color:#48484F" />
+    </linearGradient>
+
+    <polygon fill="url(#SVGID_29_)" points="68.6,493.8 8.7,417.2 146.0,417.2 86.0,493.8" />
+
+    <defs>
+      <clipPath [id]="'tower-level' + tower.id">
+        <polygon [attr.points]="getTowerLevel(tower.value, tower.maxValue, tower.minValue)" />
+      </clipPath>
+    </defs>
+
+    <rect x="18" y="15"
+        [style.fill]="'rgb(' + (1 - (tower.value - tower.minValue) / (tower.maxValue - tower.minValue)) * 255 + ',' + (tower.value - tower.minValue) / (tower.maxValue - tower.minValue) * 255 + ',0)'"
+        style="opacity: 0.5;
+        fill-rule: evenodd;
+        clip-rule: evenodd;"
+        width="118.5" height="390" [attr.clip-path]="'url(#tower-level' + tower.id + ')'" />
+
+    <path style="fill: none;
+        stroke: #21B149;
+        stroke-width: 3;
+        stroke-miterlimit: 10;"
+      d="M76.0,476.5h-50.5c-5.5,0-10-4.5-10-10v-23.9c0-5.5,4.5-10,10-10h50.5c5.5,0,10,4.5,10,10v23.9C86.0,476.5,81.5,476.5,76.0,476.5z" />
+  </g>
+</svg>
