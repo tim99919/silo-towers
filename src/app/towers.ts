@@ -9,7 +9,7 @@ export const towers = [
   {
     id: 2,
     title: "Уровень карналита в силостной башне",
-    value: 507,
+    value: 1200,
     minValue: 500,
     maxValue: 1500,
   }

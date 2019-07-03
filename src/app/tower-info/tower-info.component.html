@@ -1,18 +1,16 @@
-<main class="container" >
+<figure class="tower" *ngFor="let tower of towers">
+  <figcaption class="tower__title">
+    {{ tower.title + ' №' + tower.id }}
+  </figcaption>
 
-  <figure class="tower" *ngFor="let tower of towers">
-    <figcaption class="tower__title">
-      {{ tower.title + ' №' + tower.id }}
-    </figcaption>
+  <p class="tower__level"
+    [style.border-bottom-color]="(tower.value > tower.minValue && tower.value < tower.maxValue) ? 'green' : 'red'">
+    {{ getCurrentLevel(tower.value, tower.maxValue, tower.minValue) + '%' }}
+  </p>
 
-    <p class="tower__level" [style.border-bottom-color]="(tower.value > tower.minValue && tower.value < tower.maxValue) ? 'green' : 'red'">
-      {{ getCurrentLevel(tower.value, tower.maxValue, tower.minValue) + '%' }}
-    </p>
+  <app-tower-image [tower]="tower">
+  </app-tower-image>
 
-    <app-tower-image [tower]="tower">
-    </app-tower-image>
-
-    <p class="tower__mass">Масса карналита</p>
-    <p class="tower__mass tower__mass_large">{{ tower.value }}</p>
-  </figure>
-</main>
+  <p class="tower__mass">Масса карналита</p>
+  <p class="tower__mass tower__mass_large">{{ tower.value }}</p>
+</figure>
