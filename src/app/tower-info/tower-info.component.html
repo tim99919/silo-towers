@@ -1,7 +1,7 @@
-<div class="tower" *ngFor="let tower of indicators | async">
-  <h3 class="tower__title">
+<figure class="tower" *ngFor="let tower of indicators | async">
+  <figcaption class="tower__title">
     {{ tower.title + ' №' + tower.id }}
-  </h3>
+  </figcaption>
 
   <p class="tower__level"
     [style.border-bottom-color]="(tower.value > tower.minValue && tower.value < tower.maxValue) ? 'green' : 'red'">
@@ -13,4 +13,4 @@
 
   <p class="tower__mass">Масса карналита</p>
   <p class="tower__mass tower__mass_large">{{ tower.value }}</p>
-</div>
+</figure>
