@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TowerImageComponent } from './tower-info/tower-image/tower-image.component';
 import { TowerInfoComponent } from './tower-info/tower-info.component';
+import { IndicatorService } from './indicator.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TowerInfoComponent } from './tower-info/tower-info.component';
       { path: '', component: TowerInfoComponent },
     ]),
   ],
-  providers: [],
+  providers: [IndicatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

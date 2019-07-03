@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { towers } from '../towers';
+import { IndicatorService } from '../indicator.service';
 
 @Component({
   selector: 'app-tower-info',
@@ -8,13 +8,17 @@ import { towers } from '../towers';
   styleUrls: ['./tower-info.component.sass']
 })
 export class TowerInfoComponent implements OnInit {
-  towers = towers;
+  indicators;
 
   getCurrentLevel(value, maxValue, minValue) {
     return Math.round((value - minValue) / (maxValue - minValue) * 100);
   }
 
-  constructor() { }
+  constructor(
+    private indicatorService: IndicatorService
+  ) {
+    this.indicators = this.indicatorService.getIndicators();
+  }
 
   ngOnInit() {
   }
