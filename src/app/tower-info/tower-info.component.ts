@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { interval } from 'rxjs';
+
 import { IndicatorService } from '../indicator.service';
 import { Indicator } from '../indicator';
 
@@ -9,6 +11,7 @@ import { Indicator } from '../indicator';
   styleUrls: ['./tower-info.component.sass']
 })
 export class TowerInfoComponent implements OnInit {
+  secondsCounter = interval(1000);
   indicators: Indicator[];
 
   getCurrentLevel(value, maxValue, minValue) {
@@ -18,10 +21,16 @@ export class TowerInfoComponent implements OnInit {
   constructor(
     private indicatorService: IndicatorService
   ) {
-    this.indicators = this.indicatorService.getIndicators();
   }
 
   ngOnInit() {
+    this.secondsCounter.subscribe(_ => this.indicators = this.indicatorService.getIndicators());
   }
 
 }
+
+    // const secondsCounter = interval(1000);
+    // secondsCounter.subscribe(_ => {
+    //   let indicators = this.http.get('/assets/towers.json');
+    //   return indicators;
+    // })
