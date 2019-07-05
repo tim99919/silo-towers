@@ -12,7 +12,12 @@ import { Indicator } from '../indicator';
 })
 export class TowerInfoComponent implements OnInit {
   secondsCounter = interval(1000);
-  indicators: Indicator[];
+  indicators;
+
+  getIndicators() {
+    this.indicatorService.getIndicators()
+      .subscribe((data: Indicator[]) => this.indicators = data)
+  }
 
   getCurrentLevel(value, maxValue, minValue) {
     return Math.round((value - minValue) / (maxValue - minValue) * 100);
@@ -24,7 +29,7 @@ export class TowerInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.secondsCounter.subscribe(_ => this.indicators = this.indicatorService.getIndicators());
+    this.secondsCounter.subscribe(_ => this.getIndicators());
   }
 
 }

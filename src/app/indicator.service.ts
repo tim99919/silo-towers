@@ -8,9 +8,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class IndicatorService {
+  dataUrl: string = '/assets/towers.json';
 
   getIndicators() {
-    return this.http.get('/assets/towers.json');
+    return this.http.get(this.dataUrl);
   }
 
   constructor(
