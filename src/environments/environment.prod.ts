@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  dataUrl: '/silo-towers/assets/towers.json'
 };
