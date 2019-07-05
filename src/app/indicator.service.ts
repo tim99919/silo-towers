@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { interval } from 'rxjs';
+import { environment } from './../environments/environment';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -8,10 +8,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class IndicatorService {
-  dataUrl: string = '/assets/towers.json';
+
 
   getIndicators() {
-    return this.http.get(this.dataUrl);
+    return this.http.get(environment.dataUrl);
   }
 
   constructor(
